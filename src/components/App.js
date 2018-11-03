@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import TestComponent from './TestComponent';
 import logo from '../images/logo.svg';
 import '../static/css/App.css';
 
@@ -6,12 +7,12 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      punctuation: '!!',
+      punctuation: '!',
     };
   }
 
   handleClick = () => {
-    this.setState({punctuation: '.'});
+    this.setState({punctuation: '!!'});
   };
 
   render() {
@@ -28,7 +29,7 @@ class App extends Component {
           </a>
         </header>
 
-        <button onClick={this.handleClick}>Test Button</button>
+        <TestComponent onClick={this.handleClick} />
       </div>
     );
   }
