@@ -1,15 +1,22 @@
 import React, {Component} from 'react';
 import '../static/css/SocialMediaLink.css';
-import GithubIcon from './GithubIcon';
 
-class SocialMediaLink extends Component {
+type Props = {
+  text: string,
+  href: string,
+  icon: Component,
+};
+class SocialMediaLink extends Component<Props> {
   render() {
+    const Icon = this.props.icon;
     return (
-      <div>
-        <GithubIcon fillColor={'green'} />
-        <button className="SocialMediaLink" onClick={this.props.onClick}>
-          Test Button
-        </button>
+      <div className="SocialMediaLinkContainer">
+        <a href={this.props.href}>
+          <Icon className="SocialMediaLinkIcon" fill="purple" />
+        </a>
+        <a href={this.props.href} className="SocialMediaLink">
+          {this.props.text}
+        </a>
       </div>
     );
   }
