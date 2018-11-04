@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../static/css/SocialMediaLink.css';
+import styles from './SocialMediaLink.module.styl';
 
 type Props = {
   text: string,
@@ -10,11 +10,11 @@ class SocialMediaLink extends Component<Props> {
   render() {
     const Icon = this.props.icon;
     return (
-      <div className="SocialMediaLinkContainer">
+      <div className={styles.container}>
         <a href={this.props.href}>
-          <Icon className="SocialMediaLinkIcon" fill="purple" />
+          <Icon className={styles.icon} />
         </a>
-        <a href={this.props.href} className="SocialMediaLink">
+        <a className={styles.link} href={this.props.href}>
           {this.props.text}
         </a>
       </div>
