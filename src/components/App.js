@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import TestComponent from './TestComponent';
 import logo from '../images/logo.svg';
 import '../static/css/App.css';
+import SocialMediaLink from './SocialMediaLink';
 
 class App extends Component {
   constructor() {
@@ -27,9 +27,8 @@ class App extends Component {
           <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
             Learn React
           </a>
+          <SocialMediaLink onClick={this.handleClick} />
         </header>
-
-        <TestComponent onClick={this.handleClick} />
       </div>
     );
   }
