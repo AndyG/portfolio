@@ -11,7 +11,7 @@ class SocialMediaLink extends Component<Props> {
     const Icon = this.props.icon;
     return (
       <div className={styles.container}>
-        <a href={this.props.href}>
+        <a className={styles.iconWrapper} href={this.props.href}>
           <Icon className={styles.icon} />
         </a>
         <a className={styles.link} href={this.props.href}>
